@@ -1,32 +1,122 @@
-<!DOCTYPE html>
 <html>
+<head>
+<audio autoplay loop>
+  <source src="moonman.mp3" type="audio/mpeg">
+  get a real browser you dipshit
+</audio>
+<title>:B1:</title> 
+<style type="text/css">
+@-webkit-keyframes blink {
+        0%   { background:red url(b1_bg.png); }
+        15%  { background:#454545 url(b1_bg.png); }
+        25%  { background:blue url(b1_bg.png);}
+        40%  { background:lime url(b1_bg.png);}
+        60%  { background:#FF00CC url(b1_bg.png);}
+        75%  { background:yellow url(b1_bg.png);}
+        90%  { background:red url(b1_bg.png); }
+}
+@-moz-keyframes blink {
+        0%   { background:red url(b1_bg.png); }
+        15%  { background:#454545 url(b1_bg.png); }
+        25%  { background:blue url(b1_bg.png);}
+        40%  { background:lime url(b1_bg.png);}
+        60%  { background:#FF00CC url(b1_bg.png);}
+        75%  { background:yellow url(b1_bg.png);}
+        90%  { background:red url(b1_bg.png); }
+}
+@-ms-keyframes blink {
+        0%   { background:red url(b1_bg.png); }
+        15%  { background:#454545 url(b1_bg.png); }
+        25%  { background:blue url(b1_bg.png);}
+        40%  { background:lime url(b1_bg.png);}
+        60%  { background:#FF00CC url(b1_bg.png);}
+        75%  { background:yellow url(b1_bg.png);}
+        90%  { background:red url(b1_bg.png); }
+}
+body
+{
+	cursor:url(b1rainbow.gif), auto;
+    background-image: url("b1_bg.png");
+	background-size: 75px 75px;
+	padding: 0px;
+    margin: 0px;
+	-webkit-animation: blink 1s infinite;
+    -moz-animation:    blink 1s infinite;
+    -ms-animation:     blink 1s infinite;
+}
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+html {
+        overflow-y: hidden;
+}
+</style>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="donger : ">
+<script>
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+</script>
+<script type='text/javascript'>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
 
-    <title>donger</title>
-  </head>
+</script>
+</head>
 
-  <body>
+<Body>
+<center><img id="img1" src="b1_hd.png" alt="cog1" align="middle" style="height: 100%"></center>
+<script>rotateAnimation("img1",30);</script>
+<h2 style="width:200px;" id="status"></h2>
 
-    
-    </div>
+<div id="snowflakeContainer">
+	<img class="snowflake" src="b1.png"/>
+</div>
+</body>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>Donger</p>
-      </section>
-    </div>
+<script src="fallingsnow_v6.js"></script>
 
-    <!-- FOOTER  -->
-    
-
-    
-
-  </body>
 </html>
