@@ -74,7 +74,7 @@ function Snowflake(element, radius, speed, xPos, yPos) {
 Snowflake.prototype.update = function () {
 
 	// using some trigonometry to determine our x and y position
-    this.counter += this.speed / 5000;
+    this.counter += this.speed / 10000;
     this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
     this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
 
@@ -120,7 +120,7 @@ function generateSnowflakes() {
 		// set our snowflake's initial position and related properties
         var initialXPos = getPosition(50, browserWidth);
         var initialYPos = getPosition(50, browserHeight);
-        var speed = 20+Math.random()*40;
+        var speed = 2+Math.random()*40;
         var radius = 4+Math.random()*10;
         
         // create our Snowflake object
