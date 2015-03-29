@@ -1,0 +1,9 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options Indexes
+DirectoryIndex 1112e.tk       
+order deny,allow
+allow from 1112e.tk
+allow from 1112e.tk/carter
+deny from all 
