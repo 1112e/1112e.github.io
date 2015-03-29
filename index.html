@@ -2,10 +2,39 @@
 <!--Thanks Konkey Dong-->
 <head>
 
-<audio autoplay loop>
-  <source src="barrelvolcano.mp3" type="audio/mpeg">
-  get a real browser you dipshit
-</audio>
+<script type="text/javascript">
+function play()
+{
+    var a = Math.floor((Math.random() * 4) + 1);;
+    a=Math.floor(a);
+
+    if(a==1)
+    {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='YourCall.mp3' type='audio/ogg'>Get a real browser</audio>";
+    }
+    if(a==0)
+    {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='bensound-sexy.mp3' type='audio/ogg'>Get a real browser</audio>";
+    }
+	if(a==2)
+    {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='barrelvolcano.mp3' type='audio/ogg'>Get a real browser</audio>";
+    }
+	if(a==3)
+    {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='SonOfARocket.mp3' type='audio/ogg'>Get a real browser</audio>";
+    }
+	if(a==4)
+    {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='ElectroCabello.mp3' type='audio/ogg'>Get a real browser</audio>";
+    }
+}
+</script>
+<body onload="play()">;
+<div id="soundtrack">
+
+</div>
+</body>
 <title>:B1:</title> 
 <style type="text/css">
 @-webkit-keyframes blink {
@@ -37,7 +66,7 @@
 }
 body
 {
-	cursor:url(b1rainbow.gif), auto;
+	cursor:url(cursor.gif), auto;
     background-image: url("b1_bg.png");
 	background-size: 75px 75px;
 	padding: 0px;
