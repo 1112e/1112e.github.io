@@ -1,5 +1,4 @@
 <html>
-   
     
     <head>
         <audio autoplay="" loop="">
@@ -10,13 +9,41 @@
         </body>
         <title>:B1:</title>
     </head>
+    <img class="image" src="Vb0gRt1.gif" alt="" width="716" height="560">
     <html>
         
         <head>
             <style>
                 body {
-                    background-image: url('http://i.imgur.com/cRTRxRk.png');
+                    background-image: url('ct_bg.png');
                     background-repeat;
+                }
+                .image {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 716px;
+                    height: 560px;
+                    margin:-300px 0 0 -400px;
+                    -webkit-animation:spin 4s linear infinite;
+                    -moz-animation:spin 4s linear infinite;
+                    animation:spin 4s linear infinite;
+                }
+                @-moz-keyframes spin {
+                    100% {
+                        -moz-transform: rotate(360deg);
+                    }
+                }
+                @-webkit-keyframes spin {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+                @keyframes spin {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        transform:rotate(360deg);
+                    }
                 }
             </style>
             </body>
