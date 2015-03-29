@@ -1,0 +1,89 @@
+<html>
+<!--Thanks Konkey Dong-->
+<head>
+
+
+
+<audio autoplay="" loop="">
+  <source src="OHYEAH.mp3" type="audio/mpeg">
+  get a real browser you dipshit
+</audio>
+
+<body onload="play()">
+<div id="soundtrack">
+
+
+
+</div>
+
+</body>
+<title>:B1:</title> 
+
+
+
+<script>
+
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+</script>
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})()
+
+</script>
+</head>
+
+<html>
+<head>
+<style>
+
+body {
+    background-image: url('http://i.imgur.com/cRTRxRk.png');
+    background-repeat;
+}
+
+</body>
+</html>
+
+<Body>
+
+
+</body>
+
+
+
+
+
+</html>
