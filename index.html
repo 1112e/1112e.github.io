@@ -5,28 +5,32 @@
 <script type="text/javascript">
 function play()
 {
-    var a = Math.floor((Math.random() * 4) + 1);;
+    var a = Math.floor((Math.random() * 6) + 1);;
     a=Math.floor(a);
 
     if(a==1)
     {
         document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='YourCall.mp3' type='audio/ogg'>Get a real browser</audio>";
     }
-    if(a==0)
+    if(a==2)
     {
         document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='bensound-sexy.mp3' type='audio/ogg'>Get a real browser</audio>";
     }
-	if(a==2)
+	if(a==3)
     {
         document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='barrelvolcano.mp3' type='audio/ogg'>Get a real browser</audio>";
     }
-	if(a==3)
+	if(a==4)
     {
         document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='SonOfARocket.mp3' type='audio/ogg'>Get a real browser</audio>";
     }
-	if(a==4)
+	if(a==5)
     {
         document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='ElectroCabello.mp3' type='audio/ogg'>Get a real browser</audio>";
+    }
+	if(a==6)
+    {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='IceFlow.mp3' type='audio/ogg'>Get a real browser</audio>";
     }
 }
 </script>
